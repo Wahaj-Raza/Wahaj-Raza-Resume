@@ -1217,3 +1217,727 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+/*--------------------------------------------------------------
+# Modern Enhancements
+--------------------------------------------------------------*/
+
+/* Skills Categories */
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.skill-category {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category h5 {
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.skill-category i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.skill-category p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Projects Section */
+.project-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.project-header h4 {
+  color: #0563bb;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.project-header i {
+  margin-right: 10px;
+  color: #0563bb;
+}
+
+.project-date {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  background: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+.project-company {
+  font-style: italic;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Achievements Section */
+.achievement-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-icon {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.achievement-icon i {
+  font-size: 24px;
+}
+
+.achievement-content h4 {
+  color: #0563bb;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.achievement-org {
+  color: #666;
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.achievement-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Enhanced Hero Section */
+#hero {
+  background: 
+    linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
+    url("../img/back.gif") center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero:before {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
+}
+
+#hero h1 {
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero p span {
+  color: #ffd700;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#hero .social-links a {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 10px;
+}
+
+#hero .social-links a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Enhanced Navigation */
+@media (min-width: 992px) {
+  .nav-menu a:hover,
+  .nav-menu .active,
+  .nav-menu .active:focus,
+  .nav-menu li:hover>a {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+}
+
+/* Enhanced Progress Bars */
+.skills .progress-bar {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Enhanced Section Titles */
+.section-title h2::after {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Enhanced Resume Items */
+.resume .resume-item {
+  border-left-color: #667eea;
+}
+
+.resume .resume-item::before {
+  border-color: #667eea;
+}
+
+.resume .resume-item h4 {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Enhanced Contact Form */
+.contact .php-email-form button[type=submit] {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Footer */
+#footer .social-links a {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+#footer .social-links a:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .project-date {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+  .achievement-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .achievement-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+/* Smooth Scrolling Enhancement */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading Animation Enhancement */
+.section-bg {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Enhanced Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-in {
+  animation: slideInUp 0.6s ease forwards;
+}
+
+.project-card:hover,
+.achievement-card:hover,
+.skill-category:hover {
+  animation: pulse 0.6s ease;
+}
+
+/* Enhanced Button States */
+.contact .php-email-form button[type=submit]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact .php-email-form button[type=submit].loading {
+  position: relative;
+}
+
+.contact .php-email-form button[type=submit].loading:after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border: 2px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced Mobile Experience */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  
+  #hero p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  
+  .skill-category {
+    padding: 20px;
+  }
+  
+  .project-card,
+  .achievement-card {
+    padding: 20px;
+  }
+}
+
+/* Performance Optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.project-card,
+.achievement-card,
+.skill-category {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Focus States for Accessibility */
+.nav-menu a:focus,
+.project-card:focus,
+.achievement-card:focus,
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Enhanced Modern Contact Section */
+.contact {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.contact .section-title h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.contact .section-title p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.contact .info {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px 30px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact .info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.contact .info .address,
+.contact .info .email,
+.contact .info .phone {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact .info .address:last-child,
+.contact .info .email:last-child,
+.contact .info .phone:last-child {
+  border-bottom: none;
+}
+
+.contact .info .address:hover,
+.contact .info .email:hover,
+.contact .info .phone:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px 15px;
+  margin: 0 -15px;
+}
+
+.contact .info i {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 20px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  float: none;
+}
+
+.contact .info .address:hover i,
+.contact .info .email:hover i,
+.contact .info .phone:hover i {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+.contact .info h4 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.contact .info p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contact .info p a {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact .info p a:hover {
+  color: #764ba2;
+}
+
+/* Enhanced Contact Form */
+.contact .php-email-form {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact .php-email-form:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.contact .php-email-form .form-group {
+  margin-bottom: 25px;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  color: white;
+  padding: 15px 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.contact .php-email-form input::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+
+.contact .php-email-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 18px 40px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .php-email-form button[type=submit]:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 20px 45px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+.contact .php-email-form button[type=submit]:hover:before {
+  left: 100%;
+}
+
+.contact .php-email-form button[type=submit]:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Contact Animation Effects */
+@keyframes contactFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.contact .info {
+  animation: contactFloat 6s ease-in-out infinite;
+}
+
+.contact .php-email-form {
+  animation: contactFloat 6s ease-in-out infinite 3s;
+}
+
+/* Responsive Contact Design */
+@media (max-width: 768px) {
+  .contact .info,
+  .contact .php-email-form {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    animation: none;
+  }
+  
+  .contact .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .contact .info i {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  .contact .info h4 {
+    font-size: 1.1rem;
+  }
+  
+  .contact .php-email-form button[type=submit] {
+    width: 100%;
+    padding: 15px 30px;
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  .section-bg {
+    background: linear-gradient(135deg, #2c2c2c 0%, #3c3c3c 100%);
+  }
+  
+  .project-card,
+  .achievement-card {
+    background: #2c2c2c;
+    color: #e0e0e0;
+  }
+}

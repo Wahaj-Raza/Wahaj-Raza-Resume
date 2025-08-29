@@ -199,6 +199,127 @@
   });
 
   /**
+   * Enhanced Animations and Interactions
+   */
+  
+  // Parallax effect for hero section
+  window.addEventListener('scroll', () => {
+    const hero = select('#hero');
+    if (hero) {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      hero.style.transform = `translate3d(0, ${rate}px, 0)`;
+    }
+  });
+
+  // Enhanced skill card animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, observerOptions);
+
+  // Observe skill categories, project cards, and achievement cards
+  window.addEventListener('load', () => {
+    const animatedElements = select('.skill-category, .project-card, .achievement-card', true);
+    if (animatedElements) {
+      animatedElements.forEach(el => observer.observe(el));
+    }
+  });
+
+  // Enhanced form validation and UX
+  const contactForm = select('.php-email-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Add loading state
+      const submitBtn = select('button[type="submit"]', false, this);
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      
+      // Simulate form submission (replace with actual form handling)
+      setTimeout(() => {
+        submitBtn.textContent = 'Message Sent!';
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          this.reset();
+        }, 2000);
+      }, 1000);
+    });
+  }
+
+  // Dynamic typing speed based on content
+  const updateTypingSpeed = () => {
+    const typed = select('.typed');
+    if (typed) {
+      const items = typed.getAttribute('data-typed-items').split(',');
+      const avgLength = items.reduce((sum, item) => sum + item.length, 0) / items.length;
+      return Math.max(50, Math.min(150, avgLength * 2));
+    }
+    return 100;
+  };
+
+  // Enhanced mobile navigation
+  const mobileNavToggle = select('.mobile-nav-toggle');
+  if (mobileNavToggle) {
+    mobileNavToggle.addEventListener('click', function() {
+      document.body.classList.toggle('mobile-nav-active');
+      this.classList.toggle('bi-list');
+      this.classList.toggle('bi-x');
+      
+      // Add haptic feedback on mobile devices
+      if (navigator.vibrate) {
+        navigator.vibrate(50);
+      }
+    });
+  }
+
+  // Smooth reveal animations for cards
+  const addRevealAnimation = () => {
+    const cards = select('.project-card, .achievement-card, .skill-category', true);
+    if (cards) {
+      cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    }
+  };
+
+  // Initialize reveal animations when sections come into view
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        addRevealAnimation();
+        sectionObserver.unobserve(entry.target);
+      }
+    });
+  });
+
+  window.addEventListener('load', () => {
+    const sections = select('#skills, #projects, #achievements', true);
+    if (sections) {
+      sections.forEach(section => sectionObserver.observe(section));
+    }
+  });
+
+  /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
